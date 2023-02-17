@@ -10,7 +10,7 @@ var controller = {
 
     getArticle: (req, res) => {
         var clave = req.params.clave;
-
+        
         Article.findById(clave, (err, article) => {
             if (err) {
                 return res.status(500).send({
@@ -85,7 +85,7 @@ var controller = {
         var name = req.params.name;
         var here = this;
 
-        axios.get("http://192.168.0.250/"+name+".xml")
+        axios.get("http://localhost/xml/"+name+".xml")
             .then(data => {
                 var xml = data.data;
                 // convert XML to JSON
