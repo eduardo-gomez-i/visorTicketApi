@@ -22,7 +22,7 @@ var request = require("request");
 var catalogue;
 
 var checkCatalogue = function () {
-  request("http://localhost/xml/datos2.xml", function (error, response, body) {
+  request("http://192.168.0.250/fsanjuan-emmanuel.xml", function (error, response, body) {
     if (!error && response.statusCode == 200) {
       if (!catalogue) {
         catalogue = body;

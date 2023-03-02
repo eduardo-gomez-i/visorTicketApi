@@ -85,7 +85,7 @@ var controller = {
         var name = req.params.name;
         var here = this;
 
-        axios.get("http://localhost/xml/"+name+".xml")
+        axios.get("http://192.168.0.250/"+name+".xml")
             .then(data => {
                 var xml = data.data;
                 // convert XML to JSON
