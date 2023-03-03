@@ -119,7 +119,7 @@ var controller = {
 
     getImg: async (req, response) => {
         var clave = req.params.clave;
-        var numImg = [];
+        var numImg = 0;
 
         const path = '/var/www/html/ferremobil/public/img/productos/';
 
