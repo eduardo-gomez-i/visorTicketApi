@@ -50,4 +50,4 @@ var checkCatalogue = function () {
 };
 
 // execute checkCatalogue function once per second
-setInterval(checkCatalogue, 1000);
+setInterval(checkCatalogue, 500);

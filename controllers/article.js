@@ -68,9 +68,9 @@ var controller = {
             }
 
             if (!video) {
-                return res.status(404).send({
+                return res.status(200).send({
                     status: 'error',
-                    message: 'No existe el video'
+                    video: null
                 });
             }
 
@@ -120,15 +120,35 @@ var controller = {
     getImg: async (req, response) => {
         var clave = req.params.clave;
         var numImg = 0;
+        var images = [];
 
         const path = '/var/www/html/ferremobil/public/img/productos/';
+        //const path = 'C:/wamp64/www/xml/';
 
         try {
-            if (fs.existsSync(path +'principal/'+clave)) {
-                console.log('si existe');
-                console.log(path + 'principal/' + clave);
+            if (fs.existsSync(path +'principal/'+clave+'.jpg')) {+
                 numImg++;
-                
+                images.push("principal")
+            }
+
+            if (fs.existsSync(path +'_001/'+clave+'_001.jpg')) {+
+                numImg++;
+                images.push("_001")
+            }
+
+            if (fs.existsSync(path +'_002/'+clave+'_002.jpg')) {+
+                numImg++;
+                images.push("_002")
+            }
+
+            if (fs.existsSync(path +'_003/'+clave+'_003.jpg')) {+
+                numImg++;
+                images.push("_003")
+            }
+
+            if (fs.existsSync(path +'_004/'+clave+'_004.jpg')) {+
+                numImg++;
+                images.push("_004")
             }
         } catch (err) {
             console.error(err)
@@ -136,7 +156,8 @@ var controller = {
 
         return response.status(200).send({
             status: 'success',
-            images: numImg
+            numImages: numImg,
+            images: images
         });
 
         
