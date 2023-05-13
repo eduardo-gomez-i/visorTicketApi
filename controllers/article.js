@@ -122,7 +122,7 @@ var controller = {
         var numImg = 0;
         var images = [];
 
-        const path = '/var/www/html/ferremobil/public/img/productos/';
+        const path = '/var/www/ferremobil/public/img/productos/';
         //const path = 'C:/wamp64/www/xml/';
 
         try {
