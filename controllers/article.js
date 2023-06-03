@@ -150,6 +150,46 @@ var controller = {
                 numImg++;
                 images.push("_004")
             }
+
+            if (fs.existsSync(path +'_005/'+clave+'_005.jpg')) {+
+                numImg++;
+                images.push("_005")
+            }
+
+            if (fs.existsSync(path +'_006/'+clave+'_006.jpg')) {+
+                numImg++;
+                images.push("_006")
+            }
+
+            if (fs.existsSync(path +'_007/'+clave+'_007.jpg')) {+
+                numImg++;
+                images.push("_007")
+            }
+
+            if (fs.existsSync(path +'_008/'+clave+'_008.jpg')) {+
+                numImg++;
+                images.push("_008")
+            }
+
+            if (fs.existsSync(path +'_009/'+clave+'_009.jpg')) {+
+                numImg++;
+                images.push("_009")
+            }
+
+            if (fs.existsSync(path +'_010/'+clave+'_010.jpg')) {+
+                numImg++;
+                images.push("_010")
+            }
+
+            if (fs.existsSync(path +'_011/'+clave+'_011.jpg')) {+
+                numImg++;
+                images.push("_011")
+            }
+
+            if (fs.existsSync(path +'_012/'+clave+'_012.jpg')) {+
+                numImg++;
+                images.push("_012")
+            }
         } catch (err) {
             console.error(err)
         }
